@@ -19,4 +19,10 @@ public class Student {
     public void setName(String name) { this.name = name; }
     public void setProgramme(String programme) { this.programme = programme; }
     public void setMarks(double marks) { this.marks = marks; }
+
+    @Override
+    public String toString() {
+        return String.format("ID: %d | Name: %s | Programme: %s | Marks: %.2f",
+                studentId, name, programme, marks);
+    }
 }
