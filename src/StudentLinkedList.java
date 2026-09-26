@@ -21,4 +21,25 @@ public class StudentLinkedList {
         }
         return null;
     }
+
+    public boolean add(Student student) {
+        if (student == null || search(student.getStudentId()) != null) {
+            return false;
+        }
+
+        Node newNode = new Node(student);
+
+        if (head == null) {
+            head = newNode;
+        } else {
+            Node current = head;
+            while (current.next != null) {
+                current = current.next;
+            }
+            current.next = newNode;
+        }
+
+        size++;
+        return true;
+    }
 }
