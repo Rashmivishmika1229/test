@@ -55,4 +55,26 @@ public class StudentLinkedList {
     return true;
 }
 
+public Student delete(int studentId) {
+    Node current = head;
+    Node previous = null;
+
+    while (current != null) {
+        if (current.data.getStudentId() == studentId) {
+            if (previous == null) {
+                head = current.next;
+            } else {
+                previous.next = current.next;
+            }
+            size--;
+            return current.data;
+        }
+
+        previous = current;
+        current = current.next;
+    }
+
+    return null;
+}
+
 }
