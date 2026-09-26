@@ -10,4 +10,9 @@ public class Student {
         this.programme = programme;
         this.marks = marks;
     }
+
+    public int getStudentId() { return studentId; }
+    public String getName() { return name; }
+    public String getProgramme() { return programme; }
+    public double getMarks() { return marks; }
 }
