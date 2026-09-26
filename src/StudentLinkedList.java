@@ -91,4 +91,8 @@ public void display() {
     System.out.println("Total records: " + size);
 }
 
+public int size() {
+    return size;
+}
+
 }
