@@ -77,4 +77,18 @@ public Student delete(int studentId) {
     return null;
 }
 
+public void display() {
+    if (head == null) {
+        System.out.println("No student records found.");
+        return;
+    }
+
+    Node current = head;
+    while (current != null) {
+        System.out.println(current.data);
+        current = current.next;
+    }
+    System.out.println("Total records: " + size);
+}
+
 }
