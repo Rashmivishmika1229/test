@@ -42,4 +42,17 @@ public class StudentLinkedList {
         size++;
         return true;
     }
+
+    public boolean update(int studentId, String name, String programme, double marks) {
+    Student student = search(studentId);
+    if (student == null) {
+        return false;
+    }
+
+    student.setName(name);
+    student.setProgramme(programme);
+    student.setMarks(marks);
+    return true;
+}
+
 }
